@@ -1,0 +1,36 @@
+//two sum
+//hash table O(n)
+let nums = [2, 7, 12, 15];
+let target = 27;
+let complements = {};
+
+for (let i = 0; i < nums.length; i++) {
+  let complement = target - nums[i];
+  if (complements.hasOwnProperty(complement)) {
+    console.log([complements[complement], i]);
+    break;
+  }
+  complements[nums[i]] = i;
+}
+
+
+
+//two sum
+//nested loops O(n^2)
+let nums = [2,7,12,15] 
+let target = 27
+let left = 0
+let right = 1
+
+while (left < nums.length - 1) {
+    if (nums[left] + nums[right] === target) {
+      console.log([left, right])
+  } else {
+      if (right === nums.length -1) {
+        left ++
+        right = left + 1
+      } else {
+        right ++
+      }
+  }
+}
