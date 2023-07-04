@@ -34,3 +34,21 @@ while (left < nums.length - 1) {
       }
   }
 }
+
+
+
+//two sum, hash map, easier than previous implementation 
+const numbers = [2, 4, 5, 7, 9];
+const target = 11;
+const hashMap = new Map()
+
+for (let i = 0; i < numbers.length; i++) {
+  const num = numbers[i]
+  const complement = target - num
+  if (hashMap.has(complement)) {
+    console.log([num, complement])
+    break
+  }
+    hashMap.set(num, true)
+  
+}
