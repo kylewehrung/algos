@@ -1,12 +1,18 @@
-const array = [1, 2, 3, 4, 5, 7];
+let arr = [1, 4, 2, 6, 3];
 
-// total number of elements, including the missing one
-const n = array.length + 1; 
-// sum of all numbers from 1 to N
-const sumOfAllNumbers = (n * (n + 1)) / 2; 
-// sum of numbers in the array
-const actualSum = array.reduce((sum, num) => sum + num, 0); 
-// calculate missing number
-const missingNumber = sumOfAllNumbers - actualSum; 
+// Sort array so the order doesn't matter
+arr.sort((a, b) => a - b);
 
-console.log(missingNumber)
+let missingNumber;
+
+// For loop, starting i at 0 so it correlates with the indeces
+for (let i = 0; i < arr.length; i++) {
+  // If the next element in the array isn't one number higher then:
+  // Add what the next elements value should be to the value of 'missingNumber' 
+  if (arr[i] !== i + 1) {
+    missingNumber = i + 1;
+    break; 
+  }
+}
+
+console.log(missingNumber);
