@@ -1,5 +1,5 @@
 let nums = [4,5,6,7,0,1,2]
-let target = 0
+let target = 2
 
 
 let left = 0;
@@ -18,6 +18,7 @@ while (left <= right) {
     } else {
         left = mid + 1;
     }
+
     } else if (nums[mid] <= nums[right]) {
     if (nums[mid] < target && target <= nums[right]) {
         left = mid + 1;
@@ -27,4 +28,3 @@ while (left <= right) {
     }
 }
 
-console.log(-1);
