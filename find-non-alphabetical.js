@@ -10,7 +10,7 @@ function findNonAlphabeticalChars(str) {
     return nonAlphabeticalChars;
   }
   
-  // Test case
+  // Test case!
   const inputString = "Hello, one23 World!";
   const nonAlphabeticalChars = findNonAlphabeticalChars(inputString);
   console.log(nonAlphabeticalChars); 
