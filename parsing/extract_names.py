@@ -25,6 +25,7 @@ if __name__ == "__main__":
 
     resume_text = sys.argv[1]
     first_name, last_name = extract_names(resume_text)
-    print("First Name:", first_name)
-    print("Last Name:", last_name)
+    print(first_name)
+    print(last_name)
+
 
