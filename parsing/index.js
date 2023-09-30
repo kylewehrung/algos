@@ -1,6 +1,6 @@
 const { spawn } = require("child_process");
 
-const resumeText = "Damian Lillard has been traded to the Bucks.";
+const resumeText = "Jimmy Butler is my favorite player.";
 
 const pythonProcess = spawn("python", ["extract_names.py", resumeText]);
 
